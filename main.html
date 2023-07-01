@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="icon" href="https://icon-library.com/images/key-icon-png/key-icon-png-20.jpg">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">Strong Password Generator</h2>
+        <div class="result">
+            <div class="display" id="display_res">🔐 CLICK TO GENERATE 🔐</div>
+            <!--<i onclick='copied("display_res")' class="fas fa-copy"></i>-->
+        </div>
+        <div class="range" data-min="4" data-max="32">
+            <div class="showrange" data-length='0'>length:</div>
+            <input id="slider" type="range" min="4" max="32" value="8" />
+        </div>
+        <div class="options">
+            <span class="option-title">Options</span>
+            <div class="option">
+                <input type="checkbox" id="uppercase" checked>
+                <label for="uppercase">Uppercase</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" id="lowercase" checked>
+                <label for="lowercase">Lowercase</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" id="numbers" checked>
+                <label for="numbers">Numbers</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Symbols</label>
+            </div>
+        </div>
+        <button class="btn generate" id="generate">Generate Password</button>
+    </div>
+    <script src="main.js"></script>
+    <script>
+        function copied(id) {
+            var copyText = document.getElementById(id);
+            copyText.select();
+            document.execCommand('copy');
+        }
+    </script>
+</body>
+</html>
